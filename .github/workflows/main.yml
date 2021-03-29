@@ -1,4 +1,4 @@
-name: Deploy
+name: deployment
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ jobs:
           go-version: 1.16
       - uses: actions/checkout@v2
       - run: go test -v ./...
-  build:
+  deployment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
